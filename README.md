@@ -1,14 +1,14 @@
 # [Sentry](https://sentry.io) logger for Yii2
 
-[![Build Status](https://travis-ci.org/notamedia/yii2-sentry.svg)](https://travis-ci.org/notamedia/yii2-sentry)
-[![Latest Stable Version](https://poser.pugx.org/notamedia/yii2-sentry/v/stable)](https://packagist.org/packages/notamedia/yii2-sentry) 
-[![Total Downloads](https://poser.pugx.org/notamedia/yii2-sentry/downloads)](https://packagist.org/packages/notamedia/yii2-sentry) 
-[![License](https://poser.pugx.org/notamedia/yii2-sentry/license)](https://packagist.org/packages/notamedia/yii2-sentry)
+[![Build Status](https://travis-ci.org/yujin1st/yii2-sentry.svg)](https://travis-ci.org/yujin1st/yii2-sentry)
+[![Latest Stable Version](https://poser.pugx.org/yujin1st/yii2-sentry/v/stable)](https://packagist.org/packages/yujin1st/yii2-sentry) 
+[![Total Downloads](https://poser.pugx.org/yujin1st/yii2-sentry/downloads)](https://packagist.org/packages/yujin1st/yii2-sentry) 
+[![License](https://poser.pugx.org/yujin1st/yii2-sentry/license)](https://packagist.org/packages/yujin1st/yii2-sentry)
 
 ## Installation
 
 ```bash
-composer require notamedia/yii2-sentry
+composer require yujin1st/yii2-sentry
 ```
 
 Add target class in the application config:
@@ -20,7 +20,7 @@ return [
 		    'traceLevel' => YII_DEBUG ? 3 : 0,
 		    'targets' => [
 			    [
-				    'class' => 'notamedia\sentry\SentryTarget',
+				    'class' => 'yujin1st\sentry\SentryTarget',
 				    'dsn' => 'http://2682ybvhbs347:235vvgy465346@sentry.io/1',
 				    'levels' => ['error', 'warning'],
 				    // Write the context information (the default is true):
@@ -58,7 +58,7 @@ Writing messages with extra data:
 ```php
     'targets' => [
         [
-            'class' => 'notamedia\sentry\SentryTarget',
+            'class' => 'yujin1st\sentry\SentryTarget',
             'dsn' => 'http://2682ybvhbs347:235vvgy465346@sentry.io/1',
             'levels' => ['error', 'warning'],
             'context' => true, // Write the context information. The default is true.
